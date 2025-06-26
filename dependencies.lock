@@ -1,0 +1,137 @@
+dependencies:
+  78/esp-opus:
+    component_hash: 8182b733f071d7bfe1e837f4c9f8649a63e4c937177f089e65772880c02f2e17
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.0.5
+  78/esp-opus-encoder:
+    component_hash: cef6f65e7cbe3ec97f3cb12b1fc028f330dee3d2b29c79764ea0a32ca0e73e06
+    dependencies:
+    - name: 78/esp-opus
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.4
+    - name: idf
+      require: private
+      version: ^5.3
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.1.0
+  espressif/esp-dsp:
+    component_hash: 3e7bbd487f1357a1d4944d0c85966d049501ea281b8a4c7f93f7cfedd5b7f23d
+    dependencies:
+    - name: idf
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=4.2'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.4.12
+  espressif/esp-sr:
+    component_hash: 76b432626af3422595f895f03155354defa9f64dbc76cf22aebd101367bb0564
+    dependencies:
+    - name: espressif/esp-dsp
+      registry_url: https://components.espressif.com
+      require: private
+      version: <=1.5.0
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.0.2
+  espressif/esp_new_jpeg:
+    component_hash: e6af208a875abd0ecfc0213d3751a11b504b463ebde6930f24096047925fa5c1
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    - esp32c2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    version: 0.6.1
+  espressif/esp_websocket_client:
+    component_hash: f77326f0e1c38da4e9c97e17c5d649b0dd13027f2645e720e48db269638fd622
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.4.0
+  idf:
+    source:
+      type: idf
+    version: 5.3.1
+  isaac830/cubicat_ble:
+    component_hash: 511d656d778964132b689c77ce825b6b77e2c6f330ecc861648d8d5ee896199c
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.0.9
+  isaac830/cubicat_s3:
+    component_hash: 2b1ff7c46b17e037f61d16eaf7ac475a98797e63d9fc31d7d0cd7faca960e3db
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3.0'
+    - name: isaac830/cubicat_ble
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.9
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.6
+  isaac830/cubicat_spine:
+    component_hash: 66bd3674ece1a223f2ff553ddd38cd297265b5c1174a71727d7196e7e80d523f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3.0'
+    - name: isaac830/cubicat_s3
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.1.3
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
+  lvgl/lvgl:
+    component_hash: d7c1ac037ae6e85d94897f807d6e7ba0946a83e720074fc95a4f6241da9f9f53
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 8.4.0
+direct_dependencies:
+- 78/esp-opus-encoder
+- espressif/esp-sr
+- espressif/esp_new_jpeg
+- espressif/esp_websocket_client
+- idf
+- isaac830/cubicat_s3
+- isaac830/cubicat_spine
+- lvgl/lvgl
+manifest_hash: eec4fb1a81d97c93438757e00a02d9ecfa19a7da4ec421dd977c4866fb05b1d8
+target: esp32s3
+version: 2.0.0
