@@ -77,7 +77,7 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 5.3.1
+    version: 5.4.1
   isaac830/cubicat_ble:
     component_hash: 511d656d778964132b689c77ce825b6b77e2c6f330ecc861648d8d5ee896199c
     dependencies:
