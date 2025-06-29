@@ -18,5 +18,10 @@
         }
     ],
     "idf.port": "/dev/tty.usbmodem101",
-    "idf.flashType": "UART"
+    "idf.flashType": "UART",
+    "files.associations": {
+        "any": "cpp",
+        "filesystem": "cpp",
+        "complex": "cpp"
+    }
 }
