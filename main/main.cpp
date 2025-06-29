@@ -261,7 +261,7 @@ extern "C" void app_main(void)
         CHAT_BG_UP
     });
 #if CONFIG_JAVASCRIPT_ENABLE
-    xiaozhi->setLLMCallback([](Emotion emo){
+    bigMouth->setLLMCallback([](Emotion emo){
         MJS_CALL("onXiaoZhiEmotion", 1, (double)emo);
 #else
     bigMouth->setLLMCallback([spineNode](Emotion emo){
@@ -279,7 +279,7 @@ extern "C" void app_main(void)
     });
 
 #if CONFIG_JAVASCRIPT_ENABLE
-    xiaozhi->setStateCallback([textBG, chat_text](DeviceState state){
+    bigMouth->setStateCallback([textBG, chat_text](DeviceState state){
         MJS_CALL("onXiaoZhiState", 1, (double)state);
 #else
     bigMouth->setStateCallback([textBG, chat_text, spineNode](DeviceState state){
@@ -297,7 +297,7 @@ extern "C" void app_main(void)
         }
     });
 #if CONFIG_JAVASCRIPT_ENABLE
-    xiaozhi->setConnectionCallback([chat_text, textBG](bool connected){
+    bigMouth->setConnectionCallback([chat_text, textBG](bool connected){
         MJS_CALL("onXiaoZhiConnected", 1, connected);
 #else
     bigMouth->setConnectionCallback([chat_text, textBG, offline](bool connected){
